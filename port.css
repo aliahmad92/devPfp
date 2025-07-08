@@ -238,7 +238,6 @@ article { display: none; }
     }
 
 /*ASIDE - SIDEBAR*/
-
 .sidebar {
     margin-bottom: 15px;
     max-height: 112px;
@@ -246,29 +245,16 @@ article { display: none; }
     padding: 15px;
     transition: var(--transition2);
 }
+
 .sidebar-info {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.sidebar-info-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
 }
 
-.logo-inline-box {
-  flex-shrink: 0;
-}
 
-.logo-inline {
-  width: 50px;
-  height: auto;
-  border-radius: 6px;
-}
 
 .avatar-box {
     background: var(--bg-gradient-onyx);
