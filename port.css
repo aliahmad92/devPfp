@@ -425,50 +425,55 @@ article { display: none; }
 
 .about {
   width: 100%;
-  max-width: 100%; /* Ensure it doesn't get capped */
+  max-width: 100%;
   padding: 0 16px;
   box-sizing: border-box;
   margin: 0 auto;
 }
 
-/* Title styling */
+/* Title: About Me */
 .about .article-title {
-  margin-bottom: 15px;
-  margin-top: 15px;
-  font-size: 24px; /* Optional: make the title a bit larger */
-  font-weight: bold;
+  margin-bottom: 18px;
+  margin-top: 18px;
+  font-size: 28px;       /* Increased from 24px */
+  font-weight: 700;
 }
 
-/* About paragraph text */
+/* Whole paragraph container */
 .about-text {
   color: var(--light-gray);
-  font-size: 16px; /* You can also use var(--fs6) if set */
-  font-weight: var(--fw300);
-  line-height: 1.6;
+  font-size: 18px;       /* Increased from 16px or var(--fs6) */
+  font-weight: 400;      /* Slightly heavier for readability */
+  line-height: 1.8;      /* More line height for space between lines */
 }
 
-/* Each paragraph inside about-text */
+/* Each paragraph block */
 .about-text p {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   text-align: justify;
-  padding: 0; /* cleaner shorthand */
+  padding: 0;
 }
 
-/* Mobile-specific tweaks */
+/* Responsive layout */
 @media (max-width: 768px) {
   .about {
     padding: 0 12px;
     border-radius: 0;
   }
 
+  .about .article-title {
+    font-size: 30px;     /* Even larger heading on mobile */
+  }
+
   .about-text {
-    font-size: 17px; /* Slightly larger on small screens for readability */
+    font-size: 19px;     /* Bigger text for readability on phones */
   }
 
   .about-text p {
     padding: 0;
   }
 }
+
 
 .service { margin-bottom: 35px; }
 
