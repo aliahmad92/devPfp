@@ -17,16 +17,23 @@ for (let i = 0; i < navigationLinks.length; i++) {
     window.scrollTo(0, 0); // Optional: scroll to top on page switch
   });
 }
-<script>
+// Wait for DOM to load (safe if placed at the end of HTML too)
+document.addEventListener('DOMContentLoaded', function () {
+  const sidebar = document.querySelector('.sidebar');
   const toggleBtn = document.querySelector('[data-sidebar-btn]');
-  const sidebarInfoMore = document.querySelector('.sidebar-info-more');
+  const toggleText = toggleBtn.querySelector('span');
 
-  toggleBtn.addEventListener('click', () => {
-    sidebarInfoMore.classList.toggle('active');
+  if (sidebar && toggleBtn && toggleText) {
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
 
-    const btnText = toggleBtn.querySelector('span');
-    btnText.textContent = sidebarInfoMore.classList.contains('active')
-      ? 'Hide Contacts'
-      : 'Show Contacts';
-  });
-</script>
+      const isActive = sidebar.classList.contains('active');
+
+      // Change button text
+      toggleText.textContent = isActive ? 'Hide Contacts' : 'Show Contacts';
+
+      // Optional: smoothly expand/collapse
+      sidebar.style.maxHeight = isActive ? '1000px' : '112px';
+    });
+  }
+});
