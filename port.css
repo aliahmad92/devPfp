@@ -453,11 +453,18 @@ about {
     border-radius: 0;
   }
 
+  .about-text {
+    font-size: 18px; /
+  }
+
   .about-text p {
     padding-left: 0;
     padding-right: 0;
+    font-size: 18px; 
+    line-height: 1.8; 
   }
 }
+
 .service { margin-bottom: 35px; }
 
 .service-title { margin-bottom: 20px; }
