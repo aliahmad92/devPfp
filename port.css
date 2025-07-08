@@ -411,25 +411,44 @@ article { display: none; }
 
 /*ABOUT*/
 
+
+.about {
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
 .about .article-title { 
-    margin-bottom: 15px;
-    margin-top: 15px;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .about-text {
-    color: var(--light-gray);
-    font-size: var(--fs6);
-    font-weight: var(--fw300);
-    line-height: 1.6;
+  color: var(--light-gray);
+  font-size: var(--fs6);
+  font-weight: var(--fw300);
+  line-height: 1.6;
 }
 
-    .about-text p { 
-        margin-bottom: 15px;
-        text-align: justify;
-        padding-left: 10px;
-        padding-right: 10px;
-     }
+.about-text p { 
+  margin-bottom: 15px;
+  text-align: justify;
+  padding-left: 0;
+  padding-right: 0;
+}
 
+@media (max-width: 768px) {
+  .about {
+    padding: 0 12px;
+    border-radius: 0;
+  }
+
+  .about-text p {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .service { margin-bottom: 35px; }
 
 .service-title { margin-bottom: 20px; }
