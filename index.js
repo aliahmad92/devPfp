@@ -17,3 +17,16 @@ for (let i = 0; i < navigationLinks.length; i++) {
     window.scrollTo(0, 0); // Optional: scroll to top on page switch
   });
 }
+<script>
+  const toggleBtn = document.querySelector('[data-sidebar-btn]');
+  const sidebarInfoMore = document.querySelector('.sidebar-info-more');
+
+  toggleBtn.addEventListener('click', () => {
+    sidebarInfoMore.classList.toggle('active');
+
+    const btnText = toggleBtn.querySelector('span');
+    btnText.textContent = sidebarInfoMore.classList.contains('active')
+      ? 'Hide Contacts'
+      : 'Show Contacts';
+  });
+</script>
