@@ -425,41 +425,51 @@ article { display: none; }
 
 .about {
   width: 100%;
+  max-width: 100%; /* Ensure it doesn't get capped */
   padding: 0 16px;
   box-sizing: border-box;
   margin: 0 auto;
 }
 
-.about .article-title { 
+/* Title styling */
+.about .article-title {
   margin-bottom: 15px;
   margin-top: 15px;
+  font-size: 24px; /* Optional: make the title a bit larger */
+  font-weight: bold;
 }
 
+/* About paragraph text */
 .about-text {
   color: var(--light-gray);
-  font-size: var(--fs6);
+  font-size: 16px; /* You can also use var(--fs6) if set */
   font-weight: var(--fw300);
   line-height: 1.6;
 }
 
-.about-text p { 
+/* Each paragraph inside about-text */
+.about-text p {
   margin-bottom: 15px;
   text-align: justify;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0; /* cleaner shorthand */
 }
 
+/* Mobile-specific tweaks */
 @media (max-width: 768px) {
   .about {
     padding: 0 12px;
     border-radius: 0;
   }
 
+  .about-text {
+    font-size: 17px; /* Slightly larger on small screens for readability */
+  }
+
   .about-text p {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
   }
 }
+
 .service { margin-bottom: 35px; }
 
 .service-title { margin-bottom: 20px; }
